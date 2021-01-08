@@ -20,9 +20,10 @@ public:
 
     void possiveis_palavras(string palavra)
     {
-        arquivo.open("banco.txt");
         int contador=0;
         string temp;
+
+        arquivo.open("banco.txt");
 
         while(!arquivo.eof())
         {
@@ -33,11 +34,11 @@ public:
                 palavras->add(temp);
                 contador++;
             }
-
         }
-
         arquivo.close();
     }
+
+
 
     int comparar(string pal1, string pal2)
     {
@@ -48,7 +49,6 @@ public:
             if(pal1[x]!=pal2[x])
                 return 0;
         }
-
         return 1;
     }
 };
