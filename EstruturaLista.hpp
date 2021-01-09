@@ -1,12 +1,9 @@
-
 using namespace std;
 
 class Estrutura {
 private:
     string palavra[30];
     int posicao;
-
-
 
 public:
 
