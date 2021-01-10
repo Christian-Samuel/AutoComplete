@@ -1,0 +1,11 @@
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\bin\Debug\GerenciarAutoComplete.exe.config
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\bin\Debug\GerenciarAutoComplete.exe
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\bin\Debug\GerenciarAutoComplete.pdb
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.csprojAssemblyReference.cache
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.Form1.resources
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.Properties.Resources.resources
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.csproj.GenerateResource.cache
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.csproj.CoreCompileInputs.cache
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.exe
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.pdb
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.ident.resources

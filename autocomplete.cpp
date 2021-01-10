@@ -1,6 +1,8 @@
 #include "ApiWindows.hpp"
 #include "buscarPalavra.hpp"
-#include "novaPalavra.hpp"
+#include "interoperabilidadeCpp.hpp"
+
+CpptoCsharp* conectar = new CpptoCsharp();
 
 void captura()
 {
@@ -14,11 +16,13 @@ void captura()
      ou 2-F2 seja pressionado e a captura de teclas se inicia */
     while(stop)
     {
+        Sleep(1);
+
         //Sai do Loop geral e volta ao estado inicial
         if(GetAsyncKeyState(VK_F1)==-32767 && GetAsyncKeyState(VK_MENU)==-32767)
         {
+            conectar->setStatus("Desligado");
             stop=false;
-            cout << "Saindo..\n";
             Sleep(500);
         }
 
@@ -26,14 +30,16 @@ void captura()
         //Entra na captura de teclas
         if(GetAsyncKeyState(VK_F2)==-32767 && GetAsyncKeyState(VK_MENU)==-32767)
         {
+            conectar->setStatus("Lendo");
             palavra_temp->clearAll();
-            Beep(600,250);
             Sleep(500);
-            cout << "Aguardando Teclas\n";
             ligado=true;
 
             while(ligado)
             {
+                Sleep(1);
+
+                //Faz a captura das teclas de A a Z
                 for(teclas = 65; teclas <= 90; teclas++)
                 {
                     resultado = GetAsyncKeyState(teclas);
@@ -47,12 +53,12 @@ void captura()
                 //Sai da captura de teclas
                 if(GetAsyncKeyState(VK_F2)==-32767 && ligado && GetAsyncKeyState(VK_MENU)==-32767)
                 {
+                        conectar->setStatus("Ligado");
                         ligado=false;
-                        cout << "Teclas Concluidas\n";
-                        Beep(700,250);
-                        palavra_temp->exibir();
+
                         if(palavra_temp->getStr()!="")
-                        Pesquisa->palavra_predefinida(palavra_temp->getStr());
+                            Pesquisa->palavra_predefinida(palavra_temp->getStr());
+
                         Sleep(500);
                 }
             }
@@ -62,14 +68,18 @@ void captura()
 
 int main()
 {
+
+    FreeConsole();//Esconder o console
+
+    conectar->setStatus("Desligado");//Mudar o status no painel de status
     //Start
     while(1)
     {
         if(GetAsyncKeyState(VK_F1)==-32767  && GetAsyncKeyState(VK_MENU)==-32767)
         {
-            Beep(500,300);
-            cout << "Ligado\n";
+            conectar->setStatus("Ligado");
             captura();
         }
+        Sleep(1);
     }
 }

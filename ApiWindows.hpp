@@ -12,7 +12,7 @@ UINT enviarClick(int letra,int tecla_esp)
 {
     INPUT input[3];
     ZeroMemory(input, sizeof(input));
-
+    //caracteres especiais
     if(tecla_esp==1)
     {
         input[0].type = INPUT_KEYBOARD;
@@ -27,7 +27,7 @@ UINT enviarClick(int letra,int tecla_esp)
 
         return  (SendInput(3,input,sizeof(INPUT)));
     }
-    else
+    else//caracteres comuns
     {
         input[0].type = INPUT_KEYBOARD;
         input[0].ki.wVk = letra;
@@ -38,8 +38,6 @@ UINT enviarClick(int letra,int tecla_esp)
 
         return (SendInput(2,input,sizeof(INPUT)));
     }
-
-
 }
 
 //Criar registro SIMPLES
@@ -54,12 +52,3 @@ int criarRegistro(HKEY local,LPCSTR chave,string dado)
     RegSetValueEx( identificador,NULL,0,REG_SZ,(const BYTE*)dado.c_str(),(dado.size() + 1 ) * sizeof(string));
         return 1;
 }
-
-
-
-
-
-
-
-
-
