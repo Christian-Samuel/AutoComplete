@@ -19,7 +19,5 @@ Depois de ter criado um comando na tela inicial e ter iniciado o script, aperte 
 e quando quiser utilizar o comando criado aperte **ALT+F2** e digite o comando desejado, apos digitar, aperte novamente
 **ALT+F2** para finalizar a captura do comando, logo em seguida a sua resposta aparecera no local onde o comando foi digitado.<br>
 Uma pequena janela translucida mostrara o estado atual.<br>
-![AddComando](https://github.com/Christian-Samuel/AutoComplete/blob/master/imagens/statuson.PNG?raw=true)<br>
-![AddComando](https://github.com/Christian-Samuel/AutoComplete/blob/master/imagens/Capturar.PNG?raw=true)<br>
-![AddComando](https://github.com/Christian-Samuel/AutoComplete/blob/master/imagens/statuscopy.PNG?raw=true)<br>
+![AddComando](https://github.com/Christian-Samuel/AutoComplete/blob/master/imagens/com_resp.GIF?raw=true)<br>
 
