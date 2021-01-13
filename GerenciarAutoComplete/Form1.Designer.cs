@@ -193,12 +193,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 12);
+            this.label9.Location = new System.Drawing.Point(3, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(358, 48);
+            this.label9.Size = new System.Drawing.Size(358, 32);
             this.label9.TabIndex = 1;
-            this.label9.Text = "                                       Atalhos:\r\nALT+F1 -> Inicia ou termina o pr" +
-    "ograma;\r\nALT+F2 -> Inicia ou termina a captura do comando;\r\n";
+            this.label9.Text = "                                       Atalhos:\r\nALT+F2 -> Inicia ou termina a ca" +
+    "ptura do comando;\r\n";
             // 
             // label6
             // 

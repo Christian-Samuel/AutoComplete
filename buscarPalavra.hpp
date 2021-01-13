@@ -2,31 +2,36 @@
 #include <fstream>
 #include <string>
 #include "EstruturaLista.hpp"
+#include "interoperabilidadeCpp.hpp"
+
 
 using namespace std;
 
 class Buscar
 {
 private:
-    int tam_backspace=0;
     ifstream arquivo;
     Estrutura* palavras = new Estrutura();
+    CpptoCsharp* requisicoes = new CpptoCsharp();
 
 public:
-
+    int tam_backspace=0;
     Buscar(){}
 
+    //Verifica se as letras digitadas correspondem a alguma palavra salva no banco de dados
     void possiveis_palavras(string palavra)
     {
         int contador=0;
         string temp;
+        palavras->clearAll();
 
-        arquivo.open("C:\\chrYstYan\\AutoComplete\\db\\banco.txt");
+        arquivo.open("C:\\chrYstYan\\AutoComplete\\db\\database.txt");
 
         while(!arquivo.eof())
         {
             getline(arquivo,temp);
 
+           //Armazena em uma estrutura as possiveis palavras
             if(comparar(palavra,temp)==1)
             {
                 palavras->add(temp);
@@ -34,7 +39,11 @@ public:
             }
         }
         arquivo.close();
+
+        //Gera um .txt com as possiveis palavras que devem ser lidas e mostradas na interface C#
+        requisicoes->setPalavras(palavras->getString(),palavras->getPos());
     }
+
 
     /*Recebe um comando do usuario e verifica no
       banco de dados se ele existe*/
@@ -50,7 +59,7 @@ public:
         while(!arquivo.eof())//Varre o arquivo em busca do comando solicitado
         {
             getline(arquivo,temp);
-            if(comparar(palavra,temp)==1)
+            if(ver_comando(palavra,temp)==1)
             {
                 cout<<temp<<"\n";
                 arquivo.close();
@@ -85,14 +94,16 @@ public:
         setPalavras(predef);
     }
 
-    void setPalavras(char* palavra)
+    void setPalavras(char palavra[])
     {
         Sleep(500);
-        //Apagar o comando digitado pelo usuario
-        for(int x=0; x<tam_backspace; x++)
-        {
-            enviarClick(8,0);
-        }
+
+            //Apagar o comando digitado pelo usuario
+            for(int x=0; x<tam_backspace; x++)
+            {
+                enviarClick(8,0);
+            }
+
 
         //Impressao de caracteres
         for(int x=0; x<strlen(palavra); x++)
@@ -145,6 +156,31 @@ public:
         {
             if(pal1[x]!=pal2[x])
                 return 0;
+        }
+        return 1;
+    }
+
+    /**/
+    int ver_comando(string pal1, string pal2)
+    {
+        char identificador;
+        int x=0;
+
+        while(identificador!=':')
+        {
+            identificador=pal2[x];
+
+            if(identificador==':')
+            {
+
+            }
+            else
+            {
+                if(pal1[x]!=pal2[x])
+                    return 0;
+            }
+
+            x++;
         }
         return 1;
     }

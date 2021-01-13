@@ -62,7 +62,7 @@
             this.MaximumSize = new System.Drawing.Size(90, 68);
             this.MinimumSize = new System.Drawing.Size(90, 68);
             this.Name = "ident";
-            this.Opacity = 0.7D;
+            this.Opacity = 0.5D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

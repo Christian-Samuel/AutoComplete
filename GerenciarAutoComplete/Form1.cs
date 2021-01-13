@@ -20,6 +20,9 @@ namespace GerenciarAutoComplete
         public Form1()
         {
             InitializeComponent();
+            //Limpa o historico
+            File.Delete("C:\\chrYstYan\\AutoComplete\\db\\interoperabilidade.txt");
+            File.Delete("C:\\chrYstYan\\AutoComplete\\db\\palavras_temporarias.txt"); 
         }
 
         private void label6_Click(object sender, EventArgs e)

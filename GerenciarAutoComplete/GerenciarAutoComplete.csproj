@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="addComando.cs" />
+    <Compile Include="aucom_interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aucom_interface.Designer.cs">
+      <DependentUpon>aucom_interface.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,8 +65,12 @@
     <Compile Include="ident.Designer.cs">
       <DependentUpon>ident.cs</DependentUpon>
     </Compile>
+    <Compile Include="interfaceControle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="aucom_interface.resx">
+      <DependentUpon>aucom_interface.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

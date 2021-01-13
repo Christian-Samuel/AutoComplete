@@ -9,3 +9,4 @@ C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoCompl
 C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.exe
 C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.pdb
 C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.ident.resources
+C:\Users\Christian\Desktop\Estudos\Projetos_e_avanços\C\Auto_Complete\AutoComplete\GerenciarAutoComplete\obj\Debug\GerenciarAutoComplete.aucom_interface.resources

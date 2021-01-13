@@ -14,6 +14,7 @@ namespace GerenciarAutoComplete
     public partial class ident : Form
     {
         string diretorio = "C:\\chrYstYan\\AutoComplete\\db\\interoperabilidade.txt";
+        aucom_interface form = new aucom_interface();
 
         public ident()
         {
@@ -27,28 +28,40 @@ namespace GerenciarAutoComplete
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            StreamReader arquivo = File.OpenText(diretorio);
-            string status = arquivo.ReadLine();
-
-            if (status == "status:Desligado")
+            try
             {
-                label1.Text = "Desligado";
-                label1.BackColor = Color.Red;
-            }
+                StreamReader arquivo = File.OpenText(diretorio);
+                string status = arquivo.ReadLine();
 
-            if (status == "status:Ligado")
+                if (status == "status:Desligado")
+                {
+                    label1.Text = "Desligado";
+                    label1.BackColor = Color.Red;
+                }
+
+                if (status == "status:Ligado")
+                {
+                    label1.Text = "Ligado";
+                    label1.BackColor = Color.Blue;
+                    form.Hide();
+
+                }
+
+                if (status == "status:Lendo")
+                {
+                    label1.Text = "Lendo..";
+                    label1.BackColor = Color.Green;
+
+
+                    form.Show();
+                }
+
+                arquivo.Close();
+            }
+            catch(System.IO.IOException ex)
             {
-                label1.Text = "Ligado";
-                label1.BackColor = Color.Blue;
-            }
 
-            if (status == "status:Lendo")
-            {
-                label1.Text = "Lendo..";
-                label1.BackColor = Color.Green;
             }
-
-            arquivo.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

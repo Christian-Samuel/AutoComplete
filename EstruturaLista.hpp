@@ -21,6 +21,16 @@ public:
         posicao++;
     }
 
+    string* getString()
+    {
+        return palavra;
+    }
+
+    int getPos()
+    {
+        return posicao;
+    }
+
     void clearAll()
     {
         posicao=0;
@@ -37,9 +47,6 @@ public:
             cout << palavra[x] << "\n";
         }
     }
-
-
-
 };
 
 class EstruturaUn
@@ -64,19 +71,25 @@ public:
         posicao++;
     }
 
-    int getNum(int pos)
+    void pop()
     {
-        return PalavraNum[pos];
+        if(posicao>=1)
+        {
+            PalavraNum[posicao-1]=0;
+            palavra[posicao-1]=(char)0;
+            PalavraChar = palavra;
+            posicao--;
+        }
+    }
+
+    int getTeclas()
+    {
+        return posicao;
     }
 
     string getStr()
     {
         return PalavraChar;
-    }
-
-    void exibir()
-    {
-        cout << PalavraChar;
     }
 
     void clearAll()
@@ -88,6 +101,12 @@ public:
         }
         posicao=0;
     }
+
+    void teste()
+    {
+        cout << PalavraChar;
+    }
+
 
 };
 
