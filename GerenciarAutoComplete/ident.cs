@@ -66,7 +66,7 @@ namespace GerenciarAutoComplete
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
         }
     }
 }

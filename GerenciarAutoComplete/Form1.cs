@@ -28,6 +28,8 @@ namespace GerenciarAutoComplete
         private void label6_Click(object sender, EventArgs e)
         {
             form.Show();
+            if (!form.Visible)
+                form.Visible = true;
             this.Visible = false;
             notifyIcon1.Visible = true;
 
@@ -71,6 +73,8 @@ namespace GerenciarAutoComplete
                 process.Kill();
                 process.WaitForExit();
             }
+
+            File.Delete("C:\\chrYstYan\\AutoComplete\\db\\interoperabilidade.txt");
         }
 
         private void radioButton1_Click(object sender, EventArgs e)

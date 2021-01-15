@@ -417,12 +417,13 @@
             this.ClientSize = new System.Drawing.Size(313, 118);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "aucom_interface";
-            this.Opacity = 0.9D;
+            this.Opacity = 0.8D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sugestões";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.aucom_interface_Load);

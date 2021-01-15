@@ -59,6 +59,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(90, 68);
             this.MinimumSize = new System.Drawing.Size(90, 68);
             this.Name = "ident";

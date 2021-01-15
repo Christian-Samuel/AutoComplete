@@ -26,7 +26,7 @@ namespace GerenciarAutoComplete
             , label26, label27, label28};
             controle.inicializar(objeto);
             timer1.Enabled = true;
-
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
