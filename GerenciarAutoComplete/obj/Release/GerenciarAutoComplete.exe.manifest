@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GerenciarAutoComplete.exe" size="229888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GerenciarAutoComplete.exe" size="230400">
       <assemblyIdentity name="GerenciarAutoComplete" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2CTs/BVNIspBC9JtLzI3oKQIfh2+zyH5I3G13362Y+0=</dsig:DigestValue>
+        <dsig:DigestValue>45/u94b9YYHDuiW6eDOCtgaxPFrAYQ7ZCfgMRfQK8TQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
