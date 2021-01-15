@@ -198,7 +198,7 @@ void captura()
 int main()
 {
 
-//    FreeConsole();//Esconder o console
+    FreeConsole();//Esconder o console
     conectar->setStatus("Ligado");
     captura();
 

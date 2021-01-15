@@ -27,21 +27,26 @@ public:
 
         arquivo.open("C:\\chrYstYan\\AutoComplete\\db\\database.txt");
 
-        while(!arquivo.eof())
+        if(arquivo)
         {
-            getline(arquivo,temp);
-
-           //Armazena em uma estrutura as possiveis palavras
-            if(comparar(palavra,temp)==1)
+            while(!arquivo.eof() && contador<28)
             {
-                palavras->add(temp);
-                contador++;
-            }
-        }
-        arquivo.close();
+                getline(arquivo,temp);
 
-        //Gera um .txt com as possiveis palavras que devem ser lidas e mostradas na interface C#
-        requisicoes->setPalavras(palavras->getString(),palavras->getPos());
+               //Armazena em uma estrutura as possiveis palavras
+                if(comparar(palavra,temp)==1)
+                {
+                    palavras->add(temp);
+                    contador++;
+                }
+            }
+            arquivo.close();
+
+            //Gera um .txt com as possiveis palavras que devem ser lidas e mostradas na interface C#
+            if(palavras->getPos()>0)
+                requisicoes->setPalavras(palavras->getString(),palavras->getPos());
+
+        }
     }
 
 

@@ -75,7 +75,17 @@ namespace GerenciarAutoComplete
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("..\\..\\..\\autocomplete.exe");
+            try
+            {
+                if (File.Exists("..\\..\\..\\autocomplete.exe"))
+                    System.Diagnostics.Process.Start("..\\..\\..\\autocomplete.exe");
+                else
+                    Process.Start("autocomplete.exe");
+            }
+            catch(System.Exception ex)
+            {
+                MessageBox.Show("Reinstale o programa, pois alguns componentes não estão presentes.");
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)

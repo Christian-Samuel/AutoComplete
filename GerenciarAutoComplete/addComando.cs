@@ -22,7 +22,7 @@ namespace GerenciarAutoComplete
             if (!Directory.Exists(diretorio))
                 Directory.CreateDirectory(diretorio);
 
-            StreamWriter arquivo = File.AppendText(diretorio+"banco.txt");
+            StreamWriter arquivo = File.AppendText(diretorio + "banco.txt");
             string ComUpper = comando.ToUpper();
 
             string newComando = ComUpper + ":" + resposta;

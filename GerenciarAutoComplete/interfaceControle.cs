@@ -51,7 +51,7 @@ namespace GerenciarAutoComplete
         //Limpa a tela
         public void clear()
         {
-            for (int x = 0; x < 28; x++)
+            for (int x = posicao; x < 28; x++)
             {
                 this.itens[x].Text = "";
                 this.itens[x].Visible = false;
@@ -77,7 +77,7 @@ namespace GerenciarAutoComplete
         //Exibe todas as palavras que estão no arquivo .txt gerado pelo script em C
         public void setPalavras()
         {
-            clear();
+            posicao = 0;
             try
             {
                 StreamReader arquivo = File.OpenText(diretorioEntrada);
@@ -91,9 +91,9 @@ namespace GerenciarAutoComplete
             {
                 
             }
-            
+            clear();
 
-            
+
         }
     }
 }
