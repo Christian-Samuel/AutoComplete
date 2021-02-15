@@ -1,6 +1,6 @@
 # AutoComplete
 Projeto em desenvolvimento utilizando API do Windows e as linguagens C++ e C#,
-para contruir um software de preenchimento automatico.
+para construir um software de preenchimento automatico.
 
 ### Tela Inicial
 Esta é a tela inicial do software e nela pode-se configurar novos comandos e ligar e desligar o autocomplete.<br>
